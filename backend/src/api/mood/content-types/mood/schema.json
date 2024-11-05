@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "moods",
+  "info": {
+    "singularName": "mood",
+    "pluralName": "moods",
+    "displayName": "Mood",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "mood": {
+      "type": "enumeration",
+      "enum": [
+        "triste",
+        "malade",
+        "fatigué",
+        "content",
+        "neutre",
+        "joyeux"
+      ]
+    },
+    "tags": {
+      "type": "json"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "moods"
+    }
+  }
+}
